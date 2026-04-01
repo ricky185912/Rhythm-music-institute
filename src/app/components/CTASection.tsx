@@ -42,7 +42,7 @@ export default function CTASection() {
           </h2>
 
           <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto">
-            Join 500+ students worldwide and experience world-class music education 
+            Join 2000+ students worldwide and experience world-class music education 
             with personalized attention and flexible scheduling.
           </p>
 
@@ -75,7 +75,7 @@ export default function CTASection() {
             </div>
             <div className="flex items-center gap-2">
               <Music className="w-4 h-4" />
-              <span className="text-sm">500+ Students</span>
+              <span className="text-sm">2000+ Students</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-sm">⭐ 4.9/5 Rating</span>

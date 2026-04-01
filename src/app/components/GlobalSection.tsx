@@ -64,7 +64,7 @@ export default function GlobalSection() {
               </div>
               <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
                 <Users className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-white">500+</div>
+                <div className="text-2xl font-bold text-white">2000+</div>
                 <div className="text-xs text-white/40">Global Students</div>
               </div>
               <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">

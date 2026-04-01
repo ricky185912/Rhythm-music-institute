@@ -248,7 +248,7 @@ export default function HeroSection() {
               transition={{ delay: 0.4 }}
               className="text-base sm:text-lg md:text-xl text-white/60 mb-6 md:mb-8 max-w-lg mx-auto lg:mx-0"
             >
-              Join 500+ students worldwide in mastering piano, Keyboard, Carnatic, Guitar, flute and Drum-kit. 
+              Join 2000+ students worldwide in mastering piano, Keyboard, Carnatic, Guitar, flute and Drum-kit. 
               Experience world-class music education with personalized attention.
             </motion.p>
 
@@ -288,7 +288,7 @@ export default function HeroSection() {
               className="grid grid-cols-3 gap-4 md:gap-8 max-w-md mx-auto lg:mx-0"
             >
               {[
-                { value: '500+', label: 'Students', icon: Users },
+                { value: '2000+', label: 'Students', icon: Users },
                 { value: '20+', label: 'Years', icon: Award },
                 { value: '50+', label: 'Performances', icon: Music },
               ].map((stat, index) => (

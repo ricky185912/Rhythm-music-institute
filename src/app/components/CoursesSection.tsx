@@ -8,55 +8,47 @@ const courses = [
     icon: Piano,
     title: 'Piano',
     level: 'Beginner to Advanced',
-    description: 'Western-Classical, Carnatic, Cine-style',
     color: 'from-yellow-400 to-yellow-500',
     duration: 'Flexible Schedule',
-    students: '200+'
   },
   {
     icon: Keyboard,
     title: 'Keyboard',
     level: 'All Levels',
-    description: 'Western-Classical, Carnatic, Cine-style',
+    description: 'Western Classical, Carnatic, Cine-style',
     color: 'from-blue-400 to-blue-500',
     duration: 'Flexible Schedule',
-    students: '150+'
   },
   {
     icon: Guitar,
     title: 'Guitar',
     level: 'Beginner to Advanced',
-    description: 'Acoustic, Classical, Cine-style',
+    description: 'Western Classical, Cine-style',
     color: 'from-purple-400 to-purple-500',
     duration: 'Flexible Schedule',
-    students: '180+'
   },
   {
     icon: Music,
     title: 'Flute',
     level: 'All Levels',
-    description: 'Western, Carnatic, Cine-style',
+    description: 'Carnatic, Cine-style',
     color: 'from-green-400 to-green-500',
     duration: 'Flexible Schedule',
-    students: '80+'
   },
   {
     icon: Drum,
     title: 'Drum-kit',
     level: 'All Levels',
-    description: 'Free-style, Western-classical',
     color: 'from-red-400 to-red-500',
     duration: 'Flexible Schedule',
-    students: '60+'
   },
   {
     icon: Star,
     title: 'Advanced Performance',
     level: 'Advanced',
-    description: 'Masterclasses, Recitals',
+    description: 'Appear for Trinity College London exams. Earn globally recognized certificates',
     color: 'from-pink-400 to-pink-500',
     duration: 'Monthly',
-    students: '50+'
   },
 ]
 
@@ -112,7 +104,6 @@ export default function CoursesSection() {
                 {/* Details */}
                 <div className="flex items-center justify-between text-sm text-white/40">
                   <span>{course.duration}</span>
-                  <span>{course.students} students</span>
                 </div>
 
                 {/* Hover effect */}

@@ -15,7 +15,6 @@ export default function Header() {
     { name: 'Performances', href: '/performances' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Reviews', href: '/reviews' },
   ]
 
   return (
