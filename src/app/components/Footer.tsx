@@ -91,10 +91,10 @@ export default function Footer() {
               <Link href="#" className="text-white/40 hover:text-yellow-400 transition-colors">
                 <Facebook size={20} />
               </Link>
-              <Link href="#" className="text-white/40 hover:text-yellow-400 transition-colors">
+              <Link href="https://www.instagram.com/rhythmmusic_institute?igsh=b2lhOHB1aDBjcGtz" target='_blank' className="text-white/40 hover:text-yellow-400 transition-colors">
                 <Instagram size={20} />
               </Link>
-              <Link href="#https://youtube.com/@rhythmmusicinstitutetambar3965?si=5ZjpCvCUAoIE6bAR" className="text-white/40 hover:text-yellow-400 transition-colors">
+              <Link href="https://youtube.com/@rhythmmusicinstitutetambar3965?si=5ZjpCvCUAoIE6bAR" target='_blank' className="text-white/40 hover:text-yellow-400 transition-colors">
                 <Youtube size={20} />
               </Link>
             </div>
@@ -144,85 +144,6 @@ export default function Footer() {
                 <span className="text-white/40 text-sm">rgallenmusic@gmail.com</span>
               </li>
             </ul>
-          </motion.div>
-
-          {/* Share Your Experience */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-          >
-            <h3 className="text-white font-semibold mb-6">Share Your Experience</h3>
-            {submitted ? (
-              <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-4 text-center">
-                <Star className="w-8 h-8 text-green-500 mx-auto mb-2" />
-                <p className="text-green-500 text-sm font-medium">Thank you for your review!</p>
-                <p className="text-white/40 text-xs mt-1">Your feedback means a lot to us</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmitReview} className="space-y-4">
-                {error && (
-                  <p className="text-red-500 text-xs text-center">{error}</p>
-                )}
-                <div>
-                  <input
-                    type="text"
-                    value={reviewName}
-                    onChange={(e) => setReviewName(e.target.value)}
-                    placeholder="Your name"
-                    required
-                    className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/20 focus:outline-none focus:border-yellow-400 transition-colors text-sm"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    rows={3}
-                    value={reviewText}
-                    onChange={(e) => setReviewText(e.target.value)}
-                    placeholder="Share your experience..."
-                    required
-                    className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/20 focus:outline-none focus:border-yellow-400 transition-colors text-sm resize-none"
-                  />
-                </div>
-                <div>
-                  <label className="text-white/60 text-xs mb-2 block">Rating</label>
-                  <div className="flex gap-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <button
-                        key={star}
-                        type="button"
-                        onClick={() => setRating(star)}
-                        className="focus:outline-none"
-                      >
-                        <Star
-                          size={20}
-                          className={`${
-                            star <= rating
-                              ? 'fill-yellow-400 text-yellow-400'
-                              : 'text-white/20 fill-white/20'
-                          } transition-colors`}
-                        />
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full px-4 py-2.5 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition-all flex items-center justify-center gap-2 text-sm disabled:opacity-50"
-                >
-                  {isSubmitting ? 'Submitting...' : 'Submit Review'}
-                  {!isSubmitting && <Send size={14} />}
-                </button>
-              </form>
-            )}
-            <Link
-              href="/reviews"
-              className="block text-center mt-4 text-yellow-400 text-xs hover:underline"
-            >
-              See all reviews →
-            </Link>
           </motion.div>
         </div>
 
