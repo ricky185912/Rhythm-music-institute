@@ -4,6 +4,7 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { Suspense } from 'react'
+import { Providers } from './providers'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -84,8 +85,6 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'your-google-verification-code', // Add your Google Search Console code
-    // yandex: 'your-yandex-code',
-    // yahoo: 'your-yahoo-code',
   },
   category: 'education',
   classification: 'Music Education Institute',
@@ -115,7 +114,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/images/logo.jpeg" />
         <meta name="msapplication-TileImage" content="/images/logo.jpeg" />
         
-        {/* Local Business Schema for "music classes near me" SEO */}
+        {/* Local Business Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -127,27 +126,27 @@ export default function RootLayout({
               "url": "https://rhythmmusicinstitute.com",
               "logo": "https://rhythmmusicinstitute.com/images/logo.jpeg",
               "image": "https://rhythmmusicinstitute.com/images/logo.jpeg",
-              "telephone": "+91 YOUR-PHONE-NUMBER",
-              "email": "info@rhythmmusicinstitute.com",
+              "telephone": "+91 87547 27711",
+              "email": "rgallenmusic@gmail.com",
               "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Your Street Address",
-                "addressLocality": "Your City",
-                "addressRegion": "Your State",
-                "postalCode": "Your PIN Code",
+                "streetAddress": "Tambaram",
+                "addressLocality": "Chennai",
+                "addressRegion": "Tamil Nadu",
+                "postalCode": "600045",
                 "addressCountry": "IN"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": "YOUR_LATITUDE",
-                "longitude": "YOUR_LONGITUDE"
+                "latitude": "12.926712",
+                "longitude": "80.112589"
               },
               "openingHours": "Mo-Sa 09:00-20:00",
               "sameAs": [
                 "https://www.facebook.com/rhythmmusic",
-                "https://www.instagram.com/rhythmmusic",
-                "https://www.youtube.com/rhythmmusic"
+                "https://www.instagram.com/rhythmmusic_institute",
+                "https://youtube.com/@rhythmmusicinstitutetambar3965"
               ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
@@ -200,12 +199,12 @@ export default function RootLayout({
               "logo": "https://rhythmmusicinstitute.com/images/logo.jpeg",
               "sameAs": [
                 "https://www.facebook.com/rhythmmusic",
-                "https://www.instagram.com/rhythmmusic",
-                "https://www.youtube.com/rhythmmusic"
+                "https://www.instagram.com/rhythmmusic_institute",
+                "https://youtube.com/@rhythmmusicinstitutetambar3965"
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+91 YOUR-PHONE-NUMBER",
+                "telephone": "+91 87547 27711",
                 "contactType": "customer service",
                 "availableLanguage": ["English", "Hindi", "Tamil"]
               }
@@ -214,17 +213,19 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-black`}>
-        <Header/>
-        <Suspense fallback={
-          <div className="min-h-screen bg-black flex items-center justify-center">
-            <div className="w-16 h-16 border-4 border-yellow-400/30 border-t-yellow-400 rounded-full animate-spin" />
-          </div>
-        }>
-          <main className="pt-20"> {/* Add padding top for fixed header */}
-            {children}
-          </main>
-        </Suspense>
-        <Footer />
+        <Providers>
+          <Header />
+          <Suspense fallback={
+            <div className="min-h-screen bg-black flex items-center justify-center">
+              <div className="w-16 h-16 border-4 border-yellow-400/30 border-t-yellow-400 rounded-full animate-spin" />
+            </div>
+          }>
+            <main className="pt-20">
+              {children}
+            </main>
+          </Suspense>
+          <Footer />
+        </Providers>
       </body>
     </html>
   )
